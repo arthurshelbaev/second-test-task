@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Caption:wght@400;700&display=swap');
+
+:root {
+
+}
+
+body {
+    margin: 0;
+    font-family: 'PT Sans Caption', sans-serif;
+    color: #364844;
+    user-select: none;
+
+    header {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        .header_wrapper {
+            display: flex;
+            justify-content: space-between;
+            width: 70vw;
+            padding: 10px 0;
+            .head_first {
+                display: flex;
+                gap: 40px;
+                .logo {
+                    font-weight: 700;
+                    font-size: 30px;
+                    color: #0DBC91;
+                    cursor: pointer;
+                }
+                .address_wrapper {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .vector {
+                        height: 18px;
+                    }
+                    .address {
+                        font-size: 14px;
+                        text-decoration: none;
+                        .city {
+                            color: #364844;
+                        }
+                        .street {
+                            color: #868686;
+                        }
+                    }
+                }
+            }
+            .head_second {
+                display: flex;
+                gap: 40px;
+                .call {
+                    display: flex;
+                    gap: 10px;
+                    align-items: center;
+                    .icon_case {
+                        display: flex;
+                        .icon {
+                            width: 27px;
+                        }
+                    }
+                    .phone {
+                        text-decoration: none;
+                        color: #364844;
+                    }
+                }
+                .request_head {
+                    font-size: 14;
+                    background-color: #0DBC91;
+                    color: white;
+                    border: 0;
+                    border-radius: 20px;
+                    padding: 10px 20px;
+                    cursor: pointer;
+                }
+            }
+        }
+        .links_wrapper {
+            background-color: #1FA181;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 10px 0;
+            .links {
+                width: 70vw;
+                display: flex;
+                gap: 20px;
+                color: white;
+                font-size: 14px;
+                .link {
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+    main {
+        display: flex;
+        justify-content: center;
+        .banner_wrapper {
+            display: flex;
+            background-color: #F8FBFA;
+            .banner_info_wrapper {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                .banner_info {
+                    height: max-content;
+                    width: 60%;
+                    .banner_title {
+                        font-weight: 700;
+                        font-size: 36px;
+                        line-height: 46.62px;
+                        margin: 20px 0;
+                    }
+                    .banner_text {
+                        margin: 20px 0;
+                    }
+                }
+            }
+            .banner_img_case {
+                max-width: 50vw;
+                display: flex;
+                .banner_img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
