@@ -94,6 +94,7 @@ body header .links_wrapper .links .link {
 body main {
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 body main .banner_wrapper {
   display: flex;
@@ -124,4 +125,106 @@ body main .banner_wrapper .banner_img_case {
 }
 body main .banner_wrapper .banner_img_case .banner_img {
   width: 100%;
+}
+body main #slider {
+  margin: 0 auto;
+  width: 800px;
+  max-width: 100%;
+  text-align: center;
+}
+body main #slider input[type=radio] {
+  display: none;
+}
+body main #slider label {
+  cursor: pointer;
+  text-decoration: none;
+}
+body main #slider #slides {
+  padding: 10px;
+  border: 3px solid #ccc;
+  background-color: #fff;
+  position: relative;
+  z-index: 1;
+}
+body main #slider #slides #overflow {
+  width: 100%;
+  overflow: hidden;
+}
+body main #slider #slides #overflow .inner {
+  transition: margin-left 800ms cubic-bezier(0.77, 0, 0.175, 1);
+  width: 400%;
+  line-height: 0;
+  height: 200px;
+}
+body main #slider #slides #overflow .inner .slide {
+  width: 25%;
+  float: left;
+  display: block;
+  height: 100%;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body main #slider #slides #overflow .inner .slide .slide_content {
+  padding: 10px;
+}
+body main #slider #slides #overflow .inner .slide_1 {
+  background-color: #00171f;
+}
+body main #slider #slides #overflow .inner .slide_2 {
+  background-color: #003459;
+}
+body main #slider #slides #overflow .inner .slide_3 {
+  background-color: #007ea7;
+}
+body main #slider #slides #overflow .inner .slide_4 {
+  background-color: #00a8e8;
+}
+body main #slider #slide1:checked ~ #slides .inner {
+  margin-left: 0;
+}
+body main #slider #slide2:checked ~ #slides .inner {
+  margin-left: -100%;
+}
+body main #slider #slide3:checked ~ #slides .inner {
+  margin-left: -200%;
+}
+body main #slider #slide4:checked ~ #slides .inner {
+  margin-left: -300%;
+}
+body main #slider #slide1:checked ~ #controls label:nth-child(2),
+body main #slider #slide2:checked ~ #controls label:nth-child(3),
+body main #slider #slide3:checked ~ #controls label:nth-child(4),
+body main #slider #slide4:checked ~ #controls label:nth-child(1) {
+  background: url("../images/next.png") no-repeat;
+  float: right;
+  margin: 0 -50px 0 0;
+  display: block;
+}
+body main #slider #slide1:checked ~ #controls label:nth-last-child(1),
+body main #slider #slide2:checked ~ #controls label:nth-last-child(4),
+body main #slider #slide3:checked ~ #controls label:nth-last-child(3),
+body main #slider #slide4:checked ~ #controls label:nth-last-child(2) {
+  background: url("../images/prev.png") no-repeat;
+  float: left;
+  margin: 0 0 0 -50px;
+  display: block;
+}
+body main #slider #controls {
+  margin: -130px 0 0 0;
+  width: 100%;
+  height: 50px;
+  z-index: 3;
+  position: relative;
+}
+body main #slider #controls label {
+  transition: opacity 0.2s ease-out;
+  display: none;
+  width: 50px;
+  height: 50px;
+  opacity: 0.4;
+}
+body main #slider #controls label:hover {
+  opacity: 1;
 }/*# sourceMappingURL=styles.css.map */
